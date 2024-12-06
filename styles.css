@@ -1,0 +1,226 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p{
+    font-weight: bolder;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to Bottom Right, #a8dadc, #1d3557);
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    height: 80vh;
+    width: 60vh;
+    background-color: #f1faee;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.title {
+    color: #457b9d;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.add-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 60px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#add-task-button {
+    padding: 20px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background: none;
+    border: none;
+    height: 100%;
+    width: auto;
+    color: white;
+    background-color: #457b9d;
+}
+
+#add-task-button:hover {
+    cursor: pointer;
+    background-color: #1d3557;
+}
+
+hr {
+    border: 1px solid #1d3557;
+    width: 100%;
+}
+
+.todo-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 70%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+    border-radius: 10px;
+    padding: 20px;
+    color: #457b9d
+}
+
+.complete-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#complete-button {
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: 2px solid hsl(0, 0%, 50%);
+    border-radius: 50%;
+}
+
+#complete-button:hover {
+    cursor: pointer;
+    background: #1d3557;
+    border: 2px solid #1d3557;
+}
+
+.completed {
+    background-color: #1d3557!important;
+    border: 2px solid #1d3557!important;
+}
+
+.completed-text {
+    color: #457b9dad;
+    text-decoration: line-through;
+}
+
+.complete-section input,
+.complete-section input:hover {
+    padding: 0px;
+    height: 100%;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #457b9d;
+}
+
+#task-title {
+    opacity: 1;
+}
+
+.edit-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* General button styles */
+.edit-section button {
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    background: none;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* Pen Icon */
+.pen-icon {
+    background-image: url("./assets/icons/pen icon.png")!important;
+}
+
+.pen-icon:hover {
+    background-image: url("./assets/icons/pen hover.png")!important;
+}
+
+/* Trash Icon */
+.trash-icon {
+    background-image: url("./assets/icons/trashcan icon.png")!important;
+}
+
+.trash-icon:hover {
+    background-image: url("./assets/icons/trashcan hover.png")!important;
+}
+
+.error {
+    color: red;
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+     
+    #container {
+        width: 100%!important;
+    }
+    
+    .add-container {
+        width: 100%;
+    }
+
+    .todo-card {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .edit-section {
+        justify-content: space-between;
+    }
+    
+
+
+}
