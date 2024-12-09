@@ -34,6 +34,7 @@ This project showcases my ability to create a functional and interactive to-do l
 ## Contact
 
 - **My Name**: Landon Linn
+- **Website**: [My Website](https://www.landonlinn.com/)
 - **My LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/landon-linn/)
 - **Email**: landonlinn1@gmail.com
 - **GitHub**: [My GitHub Profile](https://github.com/LandonLinn)
