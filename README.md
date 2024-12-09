@@ -4,10 +4,17 @@
 
 ## Table of Contents
 
-1. [About the Project](#about-the-project)
-2. [Key Features](#key-features)
-3. [Technologies Used](#technologies-used)
-4. [Contact](#contact)
+1. [Live Preview](#live-preview)
+2. [About the Project](#about-the-project)
+3. [Key Features](#key-features)
+4. [Technologies Used](#technologies-used)
+5. [Contact](#contact)
+
+---
+
+## Live Preview
+
+[Preview](https://landonlinn.github.io/TodoApp/)
 
 ---
 
