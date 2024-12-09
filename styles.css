@@ -100,23 +100,26 @@ hr {
 .todo-card {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
     width: 70%;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
     border-radius: 10px;
     padding: 20px;
-    color: #457b9d
+    color: #457b9d;
 }
 
 .complete-section {
     display: flex;
     align-items: center;
-    gap: 20px;
+    width: 70%;
+    gap: 10px;
+    overflow: hidden;
 }
 
 #complete-button {
-    height: 20px;
-    width: 20px;
+    min-height: 20px;
+    min-width: 20px;
     background: none;
     border: 2px solid hsl(0, 0%, 50%);
     border-radius: 50%;
@@ -151,14 +154,21 @@ hr {
 }
 
 #task-title {
-    opacity: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+    flex-grow: 1;
+    margin: 0;
 }
 
 .edit-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 30%;
+    min-width: 60px;
 }
 
 /* General button styles */
@@ -214,13 +224,16 @@ hr {
 
     .todo-card {
         flex-direction: column;
-        width: 80%;
+        align-items: flex-start;
+    }
+
+    .complete-section {
+        width: 100%;
     }
 
     .edit-section {
+        width: 100%;
         justify-content: space-between;
     }
-    
-
 
 }
