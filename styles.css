@@ -114,7 +114,6 @@ hr {
     align-items: center;
     width: 70%;
     gap: 10px;
-    overflow: hidden;
 }
 
 #complete-button {
@@ -170,6 +169,22 @@ hr {
     width: 30%;
     min-width: 60px;
 }
+
+.edit-input {
+    font-weight: bolder;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #457b9d;
+    width: 100%;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    resize: none; 
+    overflow: hidden;
+}
+
 
 /* General button styles */
 .edit-section button {

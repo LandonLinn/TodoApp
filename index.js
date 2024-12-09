@@ -65,18 +65,25 @@ addTaskButton.addEventListener('click', function() {
 
         // Edit Function
         editButton.addEventListener('click', function() {
-            const editInput = document.createElement("input");
-            editInput.setAttribute("type", "text");
-            editInput.setAttribute("value", taskName.innerHTML);
+            const editInput = document.createElement("textarea");
+            editInput.setAttribute("rows", "1");
+            editInput.value = taskName.innerHTML; 
+            editInput.classList.add("edit-input");
         
             completeSection.replaceChild(editInput, taskName);
             editInput.focus();
-            const length = editInput.value.length;
-            editInput.setSelectionRange(length, length);
+        
+            // Resize textarea 
+            editInput.style.height = `${editInput.scrollHeight}px`;
+            editInput.addEventListener("input", function () {
+                editInput.style.height = "auto";
+                editInput.style.height = `${editInput.scrollHeight}px`;
+            });
         
             // Handle submit when Enter is pressed
             editInput.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
+                if (event.key === 'Enter' && !event.shiftKey) {
+                    event.preventDefault();
                     if (editInput.value.trim() === '') {
                         alert("Task cannot be empty!");
                         return;
@@ -89,14 +96,14 @@ addTaskButton.addEventListener('click', function() {
             editInput.addEventListener('blur', function() {
                 if (editInput.value.trim() === '') {
                     alert("Task cannot be empty!");
-                    return; 
+                    return;
                 }
                 submitEdit();
             });
         
             function submitEdit() {
-                taskName.innerHTML = editInput.value; 
-                completeSection.replaceChild(taskName, editInput); 
+                taskName.innerHTML = editInput.value;
+                completeSection.replaceChild(taskName, editInput);
             }
         });
 
